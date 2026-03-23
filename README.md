@@ -23,7 +23,7 @@ This repo documents what it looks like when AI-assisted development crosses a la
 ## Live Deployment
 
 Deployed via GitHub Pages:  
-👉 **[https://amir-elbelawy.github.io/olive-oil-the-love-in-it](https://amir-elbelawy.github.io/olive-oil-the-love-in-it)**
+👉 **[https://amir-elbelawy.github.io/olive-oil-the-love-in-it.io/](https://amir-elbelawy.github.io/olive-oil-the-love-in-it.io/)**
 
 ## Product Context
 
