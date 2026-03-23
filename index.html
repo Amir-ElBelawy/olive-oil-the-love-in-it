@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة زيت الزيتون والزعتر الفاخرة | طعم الأصالة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Rakkas&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary-olive: #4a5d23;
+        --light-olive: #6b8c3e;
+        --gold: #c5a059;
+        --dark-gold: #8a6e2f;
+        --cream: #f9f7f0;
+        --white: #ffffff;
+        --text-dark: #2b2b2b;
+        --alert-red: #c0392b;
+        --parchment: #f5efe2;
+      }
+
+      body {
+        font-family: 'Amiri', serif;
+        background-color: var(--parchment);
+        color: var(--text-dark);
+        margin: 0;
+        padding: 40px 20px;
+        background-image: 
+          /* subtle olive branch pattern – abstract, elegant */
+          radial-gradient(circle at 10% 20%, rgba(106, 140, 62, 0.03) 0px, transparent 30px),
+          radial-gradient(circle at 90% 70%, rgba(197, 160, 89, 0.04) 0px, transparent 40px),
+          radial-gradient(circle at 30% 80%, rgba(74, 93, 35, 0.03) 0px, transparent 50px),
+          radial-gradient(circle at 70% 30%, rgba(197, 160, 89, 0.03) 0px, transparent 35px),
+          /* tiny golden dots for vintage texture */
+          repeating-linear-gradient(45deg, transparent, transparent 19px, rgba(197, 160, 89, 0.08) 20px, transparent 21px, transparent 39px),
+          repeating-linear-gradient(135deg, transparent, transparent 29px, rgba(74, 93, 35, 0.04) 30px, transparent 31px, transparent 59px);
+        min-height: 100vh;
+        position: relative;
+      }
+
+      /* hand-drawn border effect */
+      body::before {
+        content: '';
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        border: 2px dashed rgba(197, 160, 89, 0.25);
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* Main Container – aged paper */
+      .menu-frame {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: var(--white);
+        position: relative;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(74, 93, 35, 0.2);
+        padding: 15px;
+        border: 1px solid var(--gold);
+        background: linear-gradient(145deg, #fffcf5, #fcf8ee);
+        z-index: 2;
+      }
+
+      /* Inner Ornamental Border – aged edge */
+      .menu-border {
+        border: 3px double var(--primary-olive);
+        padding: 40px 50px;
+        position: relative;
+        background: 
+          linear-gradient(135deg, rgba(249, 247, 240, 0.85) 0%, rgba(255, 255, 255, 0.98) 25%, rgba(249, 247, 240, 0.85) 50%, rgba(255, 255, 255, 0.98) 75%, rgba(249, 247, 240, 0.85) 100%),
+          repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(197, 160, 89, 0.05) 2px, rgba(197, 160, 89, 0.05) 5px);
+        box-shadow: inset 0 0 30px rgba(106, 140, 62, 0.1);
+      }
+
+      /* Corner Decorations – fleurons & vintage touches */
+      .corner-deco {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        pointer-events: none;
+        border: 2px solid var(--gold);
+        opacity: 0.7;
+      }
+      .top-right {
+        top: 8px;
+        right: 8px;
+        border-bottom: none;
+        border-left: none;
+      }
+      .top-left {
+        top: 8px;
+        left: 8px;
+        border-bottom: none;
+        border-right: none;
+      }
+      .bottom-right {
+        bottom: 8px;
+        right: 8px;
+        border-top: none;
+        border-left: none;
+      }
+      .bottom-left {
+        bottom: 8px;
+        left: 8px;
+        border-top: none;
+        border-right: none;
+      }
+
+      .corner-deco::after {
+        content: '❦';
+        position: absolute;
+        color: var(--primary-olive);
+        font-size: 24px;
+        opacity: 0.8;
+        filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+      }
+      .top-right::after {
+        top: -14px;
+        right: -12px;
+        transform: rotate(15deg);
+      }
+      .top-left::after {
+        top: -14px;
+        left: -12px;
+        transform: rotate(-15deg);
+      }
+      .bottom-right::after {
+        bottom: -14px;
+        right: -12px;
+        transform: rotate(165deg);
+      }
+      .bottom-left::after {
+        bottom: -14px;
+        left: -12px;
+        transform: rotate(195deg);
+      }
+
+      /* additional hand-drawn corner accents */
+      .corner-deco::before {
+        content: '✻';
+        position: absolute;
+        color: var(--dark-gold);
+        font-size: 16px;
+      }
+      .top-right::before { top: 6px; right: 6px; }
+      .top-left::before { top: 6px; left: 6px; }
+      .bottom-right::before { bottom: 6px; right: 6px; }
+      .bottom-left::before { bottom: 6px; left: 6px; }
+
+      /* Header – with vintage heart (no emoji) */
+      header {
+        text-align: center;
+        margin-bottom: 50px;
+        border-bottom: 2px solid var(--gold);
+        padding-bottom: 20px;
+        position: relative;
+      }
+
+      header::after {
+        content: '⚘';  /* delicate flower, vintage feel */
+        position: absolute;
+        bottom: -22px;
+        left: 50%;
+        transform: translateX(-50%) rotate(5deg);
+        background: var(--white);
+        padding: 0 20px;
+        color: var(--primary-olive);
+        font-size: 32px;
+        line-height: 1;
+        text-shadow: 0 2px 4px rgba(197, 160, 89, 0.3);
+      }
+
+      h1 {
+        font-family: 'Rakkas', serif;
+        color: var(--primary-olive);
+        font-size: 4rem;
+        margin: 0;
+        line-height: 1.2;
+        text-shadow: 3px 3px 0 rgba(197, 160, 89, 0.25);
+        letter-spacing: 1px;
+      }
+
+      .subtitle {
+        font-family: 'Aref Ruqaa', serif;
+        font-size: 1.7rem;
+        color: var(--dark-gold);
+        margin-top: 5px;
+        letter-spacing: 0.5px;
+        border-top: 1px dashed var(--gold);
+        display: inline-block;
+        padding-top: 10px;
+      }
+
+      /* Sections */
+      .menu-section {
+        margin-bottom: 45px;
+        position: relative;
+      }
+
+      .section-title-wrapper {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      .section-icon {
+        color: var(--gold);
+        font-size: 1.8rem;
+        margin-left: 12px;
+        filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+      }
+
+      h2 {
+        font-family: 'Aref Ruqaa', serif;
+        font-size: 1.8rem;
+        color: var(--primary-olive);
+        margin: 0;
+        border-bottom: 1px solid var(--gold);
+        padding-bottom: 5px;
+        width: 100%;
+        font-weight: 700;
+        position: relative;
+      }
+      /* tiny olive branch end on h2 */
+      h2::after {
+        content: ' ❁';
+        font-size: 1.4rem;
+        color: var(--light-olive);
+        opacity: 0.6;
+        margin-right: 8px;
+      }
+
+      /* Product Lists – dotted line vintage style */
+      .product-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .product-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 14px;
+        position: relative;
+        font-size: 1.2rem;
+        color: var(--primary-olive);
+      }
+
+      .product-item::before {
+        content: '';
+        position: absolute;
+        bottom: 6px;
+        left: 0;
+        right: 0;
+        border-bottom: 2px dotted var(--gold);
+        z-index: 1;
+        opacity: 0.7;
+      }
+
+      .item-name {
+        background-color: transparent;
+        z-index: 2;
+        padding-left: 18px;
+        color: var(--primary-olive);
+        font-weight: 700;
+        font-size: 1.25rem;
+      }
+
+      .item-price {
+        background-color: transparent;
+        z-index: 2;
+        padding-right: 18px;
+        font-family: 'Aref Ruqaa', serif;
+        color: var(--primary-olive);
+        font-weight: bold;
+        font-size: 1.5rem;
+        min-width: 70px;
+        text-align: left;
+        letter-spacing: 1px;
+      }
+
+      /* Special Offer Section – enhanced vintage */
+      .special-offers {
+        background: #fcf9ed;
+        border: 3px double var(--dark-gold);
+        padding: 35px 30px;
+        margin: 40px -10px;
+        position: relative;
+        box-shadow: inset 0 0 20px rgba(197, 160, 89, 0.2), 0 10px 15px -8px rgba(0,0,0,0.2);
+      }
+
+      .offer-ribbon {
+        position: absolute;
+        top: -18px;
+        right: 50%;
+        transform: translateX(50%);
+        background-color: var(--alert-red);
+        color: white;
+        padding: 6px 40px;
+        font-family: 'Rakkas', serif;
+        font-size: 1.6rem;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 0;
+        letter-spacing: 1px;
+        border-left: 2px solid #b14733;
+        border-right: 2px solid #b14733;
+      }
+
+      .offer-ribbon::before,
+      .offer-ribbon::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        border-top: 8px solid #802219;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+      }
+      .offer-ribbon::before { left: 12px; }
+      .offer-ribbon::after { right: 12px; }
+
+      /* Last Piece Badge – vintage flair */
+      .badge-last {
+        display: inline-block;
+        background: var(--alert-red);
+        color: white;
+        font-size: 0.85rem;
+        padding: 3px 12px;
+        border-radius: 30px;
+        margin-right: 10px;
+        font-family: 'Amiri', serif;
+        animation: pulse 2s infinite;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        vertical-align: middle;
+        border: 1px solid #f3d6b5;
+      }
+
+      @keyframes pulse {
+        0% { opacity: 1; }
+        50% { opacity: 0.7; }
+        100% { opacity: 1; }
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        margin-top: 70px;
+        padding-top: 25px;
+        border-top: 2px solid var(--gold);
+        color: var(--primary-olive);
+        font-size: 1.1rem;
+        position: relative;
+      }
+      footer p {
+        background: var(--white);
+        display: inline-block;
+        padding: 0 20px;
+        margin-top: -20px;
+        font-size: 1.3rem;
+        font-family: 'Aref Ruqaa', serif;
+        color: var(--dark-gold);
+      }
+
+      /* --- Ornamental dividers (pure CSS, no emoji) --- */
+      .ornament-divider {
+        text-align: center;
+        margin: 40px 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        position: relative;
+      }
+      .ornament-divider::before,
+      .ornament-divider::after {
+        content: '';
+        height: 2px;
+        width: 100px;
+        background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      }
+      
+      /* Oil bottle icon – refined vintage */
+      .oil-divider {
+        height: 50px;
+      }
+      .oil-bottle-icon {
+        width: 36px;
+        height: 48px;
+        position: relative;
+        display: inline-block;
+        filter: drop-shadow(0 4px 4px rgba(0,0,0,0.15));
+      }
+      .oil-bottle-icon::before {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 36px;
+        background: var(--primary-olive);
+        border-radius: 0 0 14px 14px;
+        left: 6px;
+        top: 8px;
+        box-shadow: inset 0 -3px 0 rgba(255,215,140,0.5), inset 0 3px 5px rgba(0,0,0,0.2);
+        border-left: 2px solid var(--gold);
+        border-right: 2px solid var(--gold);
+      }
+      .oil-bottle-icon::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: var(--primary-olive);
+        border-radius: 4px 4px 0 0;
+        left: 13px;
+        top: 0px;
+        box-shadow: inset 0 -2px 0 var(--gold);
+        border: 1px solid var(--dark-gold);
+      }
+      /* tiny olive beside bottle */
+      .oil-bottle-icon span {
+        display: none;
+      }
+      .oil-divider .oil-bottle-icon {
+        margin: 0 10px;
+      }
+      .oil-divider .oil-bottle-icon::before {
+        background: linear-gradient(145deg, #4a5d23, #2f3b16);
+      }
+
+      /* Zaatar leaves – elegant, hand-drawn */
+      .zaatar-divider {
+        height: 40px;
+      }
+      .zaatar-leaves {
+        width: 48px;
+        height: 36px;
+        position: relative;
+        display: inline-block;
+        filter: drop-shadow(0 4px 4px rgba(106, 140, 62, 0.3));
+      }
+      .zaatar-leaves::before,
+      .zaatar-leaves::after {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 28px;
+        background: var(--light-olive);
+        border-radius: 80% 0 50% 30%;
+        transform: rotate(-35deg);
+        border: 1px solid #2d3b1f;
+        opacity: 0.9;
+      }
+      .zaatar-leaves::before {
+        left: 5px;
+        top: 4px;
+        background: linear-gradient(135deg, #6b8c3e, #4a611f);
+        transform: rotate(-35deg) skewX(3deg);
+      }
+      .zaatar-leaves::after {
+        left: 22px;
+        top: 10px;
+        transform: rotate(55deg) scaleX(0.9);
+        background: linear-gradient(45deg, #5f7c35, #3e521a);
+        border-radius: 30% 80% 0 50%;
+      }
+      /* central vein details */
+      .zaatar-leaves span {
+        display: none;
+      }
+
+      /* extra vintage touch: olive branch background in header */
+      header h1::before {
+        content: '';
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%236b8c3e" opacity="0.2" d="M50,20 Q65,10 80,20 Q90,30 80,45 Q70,60 50,50 Q30,40 30,25 Q35,15 50,20Z"/></svg>');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+    </style>
+</head>
+<body>
+    <div class="menu-frame">
+        <div class="menu-border">
+            <!-- Corners with vintage fleurons -->
+            <div class="corner-deco top-right"></div>
+            <div class="corner-deco top-left"></div>
+            <div class="corner-deco bottom-right"></div>
+            <div class="corner-deco bottom-left"></div>
+
+            <header>
+                <h1>زيت الزيتون</h1>
+                <div class="subtitle">أجود أنواع وأصناف زيت الزيتون والزعتر</div>
+            </header>
+
+            <!-- Section 1: Extra Virgin -->
+            <div class="menu-section">
+                <div class="section-title-wrapper">
+                    <h2>زيت زيتون بكر ممتاز عصرة أولى على البارد (بيكوال)</h2>
+                </div>
+                <ul class="product-list">
+                    <li class="product-item"><span class="item-name">٣ كيلو صفيح معدن</span><span class="item-price">٢٠٠٠ ج</span></li>
+                    <li class="product-item"><span class="item-name">كيلو زجاج معتم</span><span class="item-price">٥٤٤ ج</span></li>
+                    <li class="product-item"><span class="item-name">كيلو زجاج</span><span class="item-price">٥٠٠ ج</span></li>
+                    <li class="product-item"><span class="item-name">كيلو بلاستك</span><span class="item-price">٤٧٠ ج</span></li>
+                    <li class="product-item"><span class="item-name">نصف زجاج معتم</span><span class="item-price">٣٥٠ ج</span></li>
+                </ul>
+            </div>
+
+            <!-- Oil Divider – pure CSS bottle -->
+            <div class="ornament-divider oil-divider"><span class="oil-bottle-icon"></span></div>
+
+            <!-- Section 2: Koroneiki -->
+            <div class="menu-section">
+                <div class="section-title-wrapper">
+                    <h2>زيت زيتون بكر ممتاز عصرة أولى (كوريناكي يوناني)</h2>
+                </div>
+                <ul class="product-list">
+                    <li class="product-item"><span class="item-name">نصف كيلو زجاج معتم</span><span class="item-price">٣٥٠ ج</span></li>
+                    <li class="product-item"><span class="item-name">ربع كيلو زجاج معتم</span><span class="item-price">١٨٠ ج</span></li>
+                </ul>
+            </div>
+
+            <!-- Special Offers – Italian -->
+            <div class="special-offers">
+                <div class="offer-ribbon">عروض خاصة</div>
+                <div class="section-title-wrapper" style="margin-top: 20px;">
+                    <h2>زيت زيتون بكر ممتاز عصرة أولى (كوراتينا إيطالي)</h2>
+                </div>
+                <ul class="product-list">
+                    <li class="product-item"><span class="item-name">نصف كيلو بلاستك</span><span class="item-price">٣٢٠ ج</span></li>
+                    <li class="product-item"><span class="item-name">ربع كيلو زجاج معتم</span><span class="item-price">١٦٥ ج</span></li>
+                </ul>
+            </div>
+
+            <!-- Section 4: Virgin -->
+            <div class="menu-section">
+                <div class="section-title-wrapper">
+                    <h2>زيت زيتون بكر عصرة أولى على البارد (فيرجينيا)</h2>
+                </div>
+                <ul class="product-list">
+                    <li class="product-item">
+                        <span class="item-name">كيلو بلاستك <span class="badge-last">آخر قطعة</span></span>
+                        <span class="item-price">٤٠٠ ج</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Zaatar Divider – elegant leaf motif (no emoji) -->
+            <div class="ornament-divider zaatar-divider"><span class="zaatar-leaves"></span></div>
+
+            <!-- Section 5: Zaatar -->
+            <div class="menu-section">
+                <div class="section-title-wrapper">
+                    <h2>دقة زعتر عرايشي محوج بالمكسرات</h2>
+                </div>
+                <ul class="product-list">
+                    <li class="product-item"><span class="item-name">١/٨ ثمن كيلو</span><span class="item-price">٨٠ ج</span></li>
+                    <li class="product-item"><span class="item-name">١/٤ ربع كيلو</span><span class="item-price">١٤٠ ج</span></li>
+                </ul>
+            </div>
+
+            <footer>
+                <p>❀ طعم الأصالة .. وجودة الطبيعة ❀</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
